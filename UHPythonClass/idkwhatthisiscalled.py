@@ -1,15 +1,13 @@
 # --------------------------------------------------------------------------
 # Author : Lilac Walia
-# Date : 4/17/2021
+# Date : 6/15/2021
 # --------------------------------------------------------------------------
 
+'la' in 'laa'
 
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-
-if 5>a:
-    print(a)
-elif a==5:
+def split)the_check(number_of_friends):
+    line] = 9
+    line2 = 2
 
 
-#grade = input("Enter your grade: ")
-#if grade >= 90:
+split_the_check(5) 
