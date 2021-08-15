@@ -1,6 +1,6 @@
 # --------------------------------------------------------------------------
 # Author : Lilac Walia
-# Date : 8/3/2021
+# Date : 8/13/2021
 # --------------------------------------------------------------------------
 
 import sys
@@ -22,9 +22,15 @@ def day_name(d):
     else:
         return None
 
-def test_day_name():
-    test(day_name(3) == "Wednesday")
-    test(day_name(6) == "Saturday")
-    test(day_name(42) == None)
+def day_num(d):
+    print(d)
+    i = days.index(d)
+    return i
 
-test_day_name()
+def test_day_num():
+    test(day_num("Friday") == 5)
+    test(day_num("Sunday") == 0)
+    test(day_num(day_name(3)) == 3)
+    test(day_name(day_num("Thursday")) == "Thursday")
+
+test_day_num()

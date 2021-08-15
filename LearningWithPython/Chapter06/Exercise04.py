@@ -1,6 +1,6 @@
 # --------------------------------------------------------------------------
 # Author : Lilac Walia
-# Date : 8/3/2021
+# Date : 8/13/2021
 # --------------------------------------------------------------------------
 
 import sys
@@ -16,15 +16,9 @@ def test(did_pass):
         msg = ("Test at line {0} FAILED.".format(linenum))
     print(msg)
 
-def day_name(d):
-    if 0 < d and d < 7:
-        return days[d]
-    else:
-        return None
 
-def test_day_name():
-    test(day_name(3) == "Wednesday")
-    test(day_name(6) == "Saturday")
-    test(day_name(42) == None)
 
-test_day_name()
+def vacation(d,n):
+    
+    n % 7
+    pass
