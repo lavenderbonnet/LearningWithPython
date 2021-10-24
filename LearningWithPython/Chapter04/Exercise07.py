@@ -4,9 +4,10 @@
 # --------------------------------------------------------------------------
 
 def sum_to(n):
-    for i in range(n):
-        x = (n-i)
-    return x
+    t = 0
+    for i in range(n + 1):
+        t += i
+    return t
 
 
 def main():
