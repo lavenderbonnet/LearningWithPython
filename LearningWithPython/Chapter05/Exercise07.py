@@ -14,7 +14,6 @@ def window():
 def turtles(t):
     t = turtle.Turtle()
     t.pensize(3)
-    t.color("slate blue", "medium slate blue")
     t.speed(8)
     return t
 
