@@ -6,7 +6,7 @@ def window():
     wn.title("pretty pattern")
     return wn
 
-def turtles(t):
+def turtles():
     t = turtle.Turtle()
     t.color("blue")
     t.pensize(3)
@@ -19,6 +19,9 @@ def draw_star(t):
         t.rt(144)
 
 def draw_many_stars(t, n):
+    """
+    drawing stars in the shape of a star
+    """
     for i in range(n):
         t.penup()
         t.forward(350)
@@ -28,7 +31,7 @@ def draw_many_stars(t, n):
 
 def main():
     wn = window()
-    t = turtles("tess")
+    t = turtles()
     draw_many_stars(t, 5)
     wn.mainloop()
 
