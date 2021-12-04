@@ -8,7 +8,7 @@ import os
 os.chdir("D:\Lilac\Coding\Python\LearningWithPython\Chapter13")
 cwd = os.getcwd()
 
-file = open("13.5toRead.txt")
+file = open("number13.5toRead.txt")
 content = file.read()
 file.close()
 

@@ -20,7 +20,7 @@ cwd = os.getcwd()
 
 print(f"Current working directory: {cwd}")
 
-myfile = open("test.txt", "w")
+myfile = open("writingTest.txt", "w")
 # "w" means opening the file for writing
 myfile.write("My first file written from Python\n")
 myfile.write("------------------------------\n")
