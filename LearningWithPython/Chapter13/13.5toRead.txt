@@ -1,0 +1,24 @@
+13.5. Reading the whole file at once
+Another way of working with text files is to read the complete contents of the file into a string, and then to use our string-processing skills to work with the contents.
+
+We’d normally use this method of processing files if we were not interested in the line structure of the file. For example, we’ve seen the split method on strings which can break a string into words. So here is how we might count the number of words in a file:
+
+1
+2
+3
+4
+5
+6
+f = open("somefile.txt")
+content = f.read()
+f.close()
+
+words = content.split()
+print("There are {0} words in the file.".format(len(words)))
+Notice here that we left out the "r" mode in line 1. By default, if we don’t supply the mode, Python opens the file for reading.
+
+Your file paths may need to be explicitly named.
+
+In the above example, we’re assuming that the file somefile.txt is in the same directory as your Python source code. If this is not the case, you may need to provide a full or a relative path to the file. On Windows, a full path could look like "C:\\temp\\somefile.txt", while on a Unix system the full path could be "/home/jimmy/somefile.txt".
+
+We’ll return to this later in this chapter.
