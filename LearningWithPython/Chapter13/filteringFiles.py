@@ -8,6 +8,8 @@ import os
 os.chdir("D:\Lilac\Coding\Python\LearningWithPython\Chapter13")
 cwd = os.getcwd()
 
+# don't print things with a "#"
+
 def filter(oldfile, newfile):
     infile = open(oldfile, "r")
     outfile = open(newfile, "w")
