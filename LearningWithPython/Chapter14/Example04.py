@@ -34,7 +34,26 @@ def get_words_in_book(filename):
     content = f.read()
     f.close()
     wds = text_to_words(content)
+
     return wds
 
-book_words = get_words_in_book("AliceInWonderland.txt")
-print(f"There are {len(book_words)} words in the book, and the first 100 words are {book_words[:100]}")
+def unique_word_count(wds):
+    
+    wds_dic = {}
+    for w in wds:
+        if w in wds_dic:
+            wds_dic[w] += 1
+        else:
+            wds_dic[w] = 1
+    
+    print(wds_dic)
+    return wds_dic
+
+if __name__ == "__main__":
+    book_words = get_words_in_book("AliceInWonderland.txt")
+    # print(f"There are {len(book_words)} words in the book,\
+        #  and the first 100 words are {book_words[:100]}")
+    wds_dic = unique_word_count(book_words)
+    print(wds_dic)
+
+
