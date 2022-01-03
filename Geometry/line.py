@@ -8,7 +8,7 @@ class Line:
         self.p1 = p1
         self.p2 = p2
 
-    def Lenght(self, p1, p2):
+    def Length(self, p1, p2):
         px = (p2.x - p1.x)**2
         py = (p2.y - p1.y)**2
         (px + py)**(1/2)
