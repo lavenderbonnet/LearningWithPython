@@ -76,6 +76,25 @@ class Triangle:
         return area
 
 #-------------------------------------------------------------
+class Circle:
+    def __init__(self, c, r):
+        self.c = c
+        self.r = r
+
+    def __str__(self):
+        return f"({self.c}, {self.r})"
+
+    def get_area(self):
+        r2 = self.r**2
+        a = r2*3.1415
+        return a
+
+    def get_circumference(self):
+        d = 2*self.r
+        cir = d*3.1415
+        return cir
+
+#-------------------------------------------------------------
 
 def test_equilateral_triangle():
     p1 = Point(0, 0)
@@ -109,5 +128,24 @@ def test_triangles():
     test_isoceles()
     test_right_triangle()
 
+def test_get_area():
+    c = Point(0,0)
+    r = 6
+
+    c = Circle(c, r)
+    print(f"The area is {c.get_area()}")
+
+def test_get_circumference():
+    c = Point(3, 0)
+    r = 3
+
+    c = Circle(c, r)
+    print(f"The circumference is {c.get_circumference()}")
+
+def test_circles():
+    test_get_area()
+    test_get_circumference()
+
 if __name__ == "__main__":
-    test_triangles()
+    # test_triangles()
+    test_circles()
