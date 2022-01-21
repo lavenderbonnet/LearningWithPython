@@ -1,6 +1,7 @@
 # --------------------------------------------------------------------------
 # Author : Lilac Walia
-# Date : 12/7/2021
+# Date : 1/20/2022
+# About : Adding a randomizer
 # --------------------------------------------------------------------------
 
 
@@ -51,3 +52,21 @@ def has_clashes(board):
         if column_clashes(board, column):
             return True
     return False
+
+def main():
+    import random
+    rng = random.Random()
+
+    bd = list(range(8))
+    num_found = 0
+    tries = 0
+    while num_found < 10:
+        rng.shuffle(bd)
+        tries += 1
+        if not has_clashes(bd):
+            print(f"Found solution {bd} in {tries} tries")
+            tries = 0
+            num_found += 1
+
+if __name__ == "__main__":
+    main()
