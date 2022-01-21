@@ -17,7 +17,7 @@ def draw_board(board):
 
     surface = pygame.display.set_mode((surface_size, surface_size))
 
-    ball_file_path = "D:\Lilac\Coding\Python\LearningWithPython\Chapter17\\beachBall.png"
+    ball_file_path = "D:\Lilac\Coding\Python\LearningWithPython\Chapter17\\smallerBeachBall.png"
     ball = pygame.image.load(ball_file_path)
     ball_offset = (square_size-ball.get_width()) // 2
 
@@ -34,7 +34,7 @@ def draw_board(board):
                 color_index = (color_index + 1) % 2
             
         for (column, row) in enumerate(board):
-            surface.blit(ball, (column*square_size + ball_offset, row*square_size) + ball_offset)
+            surface.blit(ball, (column*square_size + ball_offset, row*square_size + ball_offset))
             
         pygame.display.flip()
 
