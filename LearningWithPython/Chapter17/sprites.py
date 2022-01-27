@@ -38,10 +38,19 @@ def draw_board(board):
     ball = pygame.image.load(ball_file_path)
     ball_offset = (square_size-ball.get_width()) // 2
 
+    all_sprites = []
+
+    for (column, row) in enumerate(board):
+        a_queen = QueenSprite(ball, (column*square_size+ball_offset, row*square_size+ball_offset))
+        all_sprites.append(a_queen)
+
     while True:
         ev = pygame.event.poll()
         if ev.type == pygame.QUIT:
             break
+
+        for sprite in all_sprites:
+            sprite.update()
 
         for row in range(n):
             color_index = row % 2
@@ -53,6 +62,9 @@ def draw_board(board):
         for (column, row) in enumerate(board):
             surface.blit(ball, (column*square_size + ball_offset, row*square_size + ball_offset))
             
+        for sprite in all_sprites:
+            sprite.draw(surface)
+
         pygame.display.flip()
 
     pygame.quit
