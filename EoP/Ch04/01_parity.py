@@ -19,10 +19,36 @@ def parity(total):
 
     return result
 
+# ----------------------------
+
+def book_parity_01(x):
+    result = 0
+    while x:
+        y = x & 1
+        result = result ^ y
+        x >>= 1
+        print(result)
+    
+    return result
+
+def book_parity_02(x):
+    result = 0
+    while x:
+        result ^= 1
+        x &= x - 1 # drops the lowest set bit of x
+    
+    return result
+
+# ----------------------------
+
 def main():
-    x = 1000011010
-    total = num_of_ones(x)
-    print(parity(total))
+    x = 1000011011
+    # total = num_of_ones(x)
+    # print(parity(total))
+    # book_parity_01(x)
+    print(book_parity_02(x))
+
+    
 
 if __name__ == "__main__":
     main()
