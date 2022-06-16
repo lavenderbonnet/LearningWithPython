@@ -23,19 +23,18 @@ def parity(total):
 
 def book_parity_01(x):
     result = 0
-    while x:
-        y = x & 1
-        result = result ^ y
-        x >>= 1
-        print(result)
+    while x:                # notice that x & 1 is not x ^ 1
+        result ^= x & 1     # simplified version of result = result ^ (x & 1)
+        x >>= 1             # removes the last digit from the binary string
+        # print(result)
     
     return result
 
 def book_parity_02(x):
     result = 0
     while x:
-        result ^= 1
-        x &= x - 1 # drops the lowest set bit of x
+        result ^= 1         # XOR the 0/1 with 1
+        x &= x - 1          # drops the lowest set bit of x
     
     return result
 
