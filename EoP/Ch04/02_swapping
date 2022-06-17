@@ -3,12 +3,15 @@
 # Date : 6/17/2022
 # --------------------------------------------------------------------------
 
+
+# given a number, swap the i-th bit and the j-th bit in binary
+
 def swap_bits(x, i, j):
     # Extract the i-th and j-th bits, and see if they differ
     if (x>>i) & 1 != (x>>j) & 1:
         # i-th and j-th bits differ. We will swap them by flipping their values
         # select the bits to flip with bit_mask. Since x^1 = 0 when x = 1 and 1
-        #  when x = 0, we can perform the flip XOR
+        # when x = 0, we can perform the flip XOR
         bit_mask = (1 << i) | (1 << j)
         x ^= bit_mask
     
